@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Weapon</title>
+    <link rel="stylesheet" href="/static/css/style.css">  <!-- Link to the CSS -->
+</head>
+<body>
+    <h1>Assign Weapon to Officer</h1>
+    <form method="POST">
+        <label for="weapon_id">Weapon:</label>
+        <select name="weapon_id" id="weapon_id" required>
+            {% for weapon in weapons %}
+            <option value="{{ weapon.weapon_id }}">{{ weapon.weapon_name }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="officer_id">Officer:</label>
+        <select name="officer_id" id="officer_id" required>
+            {% for officer in officers %}
+            <option value="{{ officer.officer_id }}">{{ officer.name }} ({{ officer.rank }})</option>
+            {% endfor %}
+        </select><br>
+
+        <button type="submit">Assign Weapon</button>
+    </form>
+    <br>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>

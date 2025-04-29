@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigned Weapons</title>
+    <link rel="stylesheet" href="/static/css/style.css">  <!-- Link to the CSS -->
+</head>
+<body>
+    <h1>Assigned Weapons</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Weapon Name</th>
+                <th>Officer Name</th>
+                <th>Officer Rank</th>
+                <th>Assigned Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for assignment in assignments %}
+            <tr>
+                <td>{{ assignment.weapon_name }}</td>
+                <td>{{ assignment.officer_name }}</td>
+                <td>{{ assignment.rank }}</td>
+                <td>{{ assignment.assigned_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>

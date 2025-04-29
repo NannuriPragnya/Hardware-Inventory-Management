@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Weapon</title>
+    <link rel="stylesheet" href="/static/css/style.css">  <!-- Correct link to the CSS file -->
+</head>
+<body>
+    <h1>Add New Weapon</h1>
+    <form method="POST">
+        <label for="name">Weapon Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="type">Weapon Type:</label>
+        <input type="text" id="type" name="type" required><br>
+
+        <label for="range">Range:</label>
+        <input type="text" id="range" name="range" required><br>
+
+        <label for="functionality">Functionality:</label>
+        <input type="text" id="functionality" name="functionality" required><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br>
+
+        <button type="submit">Add Weapon</button>
+    </form>
+    <br>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>

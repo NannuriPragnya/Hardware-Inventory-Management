@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Weapons</title>
+    <link rel="stylesheet" href="/static/css/style.css">  <!-- Link to the CSS -->
+</head>
+<body>
+    <h1>Weapons in Inventory</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Weapon Name</th>
+                <th>Type</th>
+                <th>Range</th>
+                <th>Functionality</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for weapon in weapons %}
+            <tr>
+                <td>{{ weapon.weapon_name }}</td>
+                <td>{{ weapon.type }}</td>
+                <td>{{ weapon.range }}</td>
+                <td>{{ weapon.functionality }}</td>
+                <td>{{ weapon.quantity }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>
